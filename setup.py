@@ -10,9 +10,6 @@ with open("README.md") as f:
 with open(os.path.join(os.path.dirname(__file__), 'requirements.txt')) as f:
     required = f.read().splitlines()
 
-with open(os.path.join(os.path.dirname(__file__), 'test_requirements.txt')) as f:
-    test_required = f.read().splitlines() + required
-
 setup(
     name='asyncio_owl',
     version='0.0.1',
@@ -31,7 +28,5 @@ setup(
         'Natural Language :: English',
         'Programming Language :: Python :: 3.6',
     ],
-    test_suite='tests',
-    tests_require=test_required,
 
 )
